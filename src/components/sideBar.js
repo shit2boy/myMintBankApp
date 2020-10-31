@@ -31,9 +31,9 @@ export class SideNavbar extends Component {
     return (
       <div>
         <Sider
-          style={{ padding: "0px", minHeight: "100vh" }}
+          style={{ padding: "5px", minHeight: "100vh" }}
           theme="light"
-          className="site-layout-background"
+          className=" site-layout-background"
           collapsible
           width={250}
           collapsed={collapsed}

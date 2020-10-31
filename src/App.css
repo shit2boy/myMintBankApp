@@ -3,6 +3,19 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI";
+  color: #7f8fa4;
+}
+
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: #eee;
+}
+
+input:focus {
+  outline: none;
 }
 
 .bgNav {
@@ -23,7 +36,19 @@
   box-sizing: border-box;
   border-radius: 2px;
 }
+/***Payments Seearch*/
 
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
 /** transaction Table **/
 table {
   border-collapse: collapse;

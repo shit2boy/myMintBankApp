@@ -6,6 +6,7 @@ import { Container, Col, Row } from "react-bootstrap";
 import Sidebar from "./components/sideBar";
 // import MyCharts from "./components/chart";
 import Transaction from "./components/Transactions";
+import Graph from "./components/Graph";
 import Table from "./components/Table";
 
 export class App extends Component {
@@ -17,14 +18,17 @@ export class App extends Component {
         </div>
         <Container fluid>
           <Row>
-            <Col className="ml0" sm={3}>
+            <Col className="mr-4 p3" sm={2}>
               <Sidebar />
             </Col>
-            <Col sm={9}>
-              <Row>
+            <Col className="ml-4" style={{ background: "#cccfd4" }}>
+              <Row className="container">
                 <Transaction />
               </Row>
               <Row>
+                <Graph />
+              </Row>
+              <Row className="container">
                 <Table />
               </Row>
             </Col>
