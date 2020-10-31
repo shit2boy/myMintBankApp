@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+// import { dummyData } from "../utils/DummyData";
+
 import {
   AreaChart,
   Area,
@@ -6,61 +8,66 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
 } from "recharts";
 
 const data = [
   {
-    name: "Page A",
-    uv: 4000,
+    name: "Jan ",
     pv: 2400,
     amt: 2400,
   },
   {
-    name: "Page B",
-    uv: 3000,
+    name: "Feb",
     pv: 1798,
     amt: 2210,
   },
   {
-    name: "Page C",
-    uv: 2000,
+    name: " Mar",
     pv: 5800,
     amt: 2290,
   },
   {
-    name: "Page D",
+    name: " Apr",
     uv: 2780,
     pv: 3908,
     amt: 2000,
   },
   {
-    name: "Page E",
-    uv: 1890,
+    name: "May",
     pv: 4800,
     amt: 2181,
   },
   {
-    name: "Page F",
-    uv: 2390,
+    name: "Jun",
     pv: 3800,
     amt: 2500,
   },
   {
-    name: "Page G",
-    uv: 3490,
+    name: "Jul",
     pv: 4300,
     amt: 2100,
   },
 ];
-export default class Graph extends Component {
-  //   static jsfiddleUrl = "https://jsfiddle.net/alidingling/xqjtetw0/";
 
+export default class Graph extends Component {
   render() {
+    // const { data } = this.props;
+    // let arr = [];
+    // let obj;
+    // for (let i = 0; i < data.length; i++) {
+    //   obj = { month: data[i].month };
+    //   for (let j = 0; j < data[i].commodities.length; j++) {
+    //     let commodity = data[i].commodities[j];
+    //     obj[commodity.Payments] = commodity.Price;
+    //   }
+    //   arr.push(obj);
+    //   //   this.setState({ converted: arr });
+    //   console.log(arr);
+    // }
+    //   }}
     return (
       <AreaChart
-        className="border"
-        width={730}
+        width={650}
         height={250}
         data={data}
         margin={{ top: 10, right: 30, left: 0, bottom: 0 }}

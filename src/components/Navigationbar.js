@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Transmonitor from "../icons/TransMonitor.svg";
+import userImg from "../icons/userImg.png";
 
 export class Navigationbar extends Component {
   render() {
@@ -19,22 +20,40 @@ export class Navigationbar extends Component {
           </button>
 
           <div className="collapse navbar-collapse" id="navbarCollapse">
-            <form className="form-inline mx-auto">
+            {/* <i className="fa fa-search" /> */}
+            <form className=" w-50 mx-auto">
               <input
                 type="search"
+                style={{ borderBottomStyle: "hidden" }}
                 className="form-control mr-sm-2 w-100"
-                placeholder="Search"
+                placeholder="Search..."
               />
             </form>
-            <div className="navbar-nav mr-auto">
+            <div className="navbar-nav ">
               <a href="#2" className="nav-item nav-link active">
-                Home
+                Support
               </a>
               <a href="#3" className="nav-item nav-link">
-                About
+                FAQ
+              </a>
+              <a href="#3" className="nav-item nav-link">
+                Pricing
               </a>
               <a href="#4" className="nav-item nav-link">
-                Products
+                <i class="fa fa-bell" />
+                <span class="badge badge-light">3</span>
+              </a>
+              <div>
+                <small className="d-block">Hello</small>
+                <small className="d-block">Oluwaleke Ojo</small>
+              </div>
+
+              <a href="#4" className="nav-item nav-link">
+                <img
+                  src={userImg}
+                  alt="userImg"
+                  className=" p-1 rounded-circle"
+                />
               </a>
             </div>
           </div>

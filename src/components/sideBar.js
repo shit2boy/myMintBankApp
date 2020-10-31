@@ -27,27 +27,23 @@ export class SideNavbar extends Component {
     this.setState({ collapsed });
   };
   render() {
-    const { collapsed } = this.state;
+    // const { collapsed } = this.state;
     return (
       <div>
         <Sider
           style={{ padding: "5px", minHeight: "100vh" }}
           theme="light"
           className=" site-layout-background"
-          collapsible
           width={250}
-          collapsed={collapsed}
-          onCollapse={this.onCollapse}
         >
           <span
             class="badge mt-5 ml-3 py-3 px-5 badge-pill badge-success"
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", fontSize: "14px" }}
           >
             Generate Invoice
           </span>
           <menu className="p-3 mt-2">main</menu>
           <Menu theme="light" defaultSelectedKeys={["1"]} mode="inline">
-            {/* <small>Overview</small> */}
             <Menu.Item
               className=""
               key="0"

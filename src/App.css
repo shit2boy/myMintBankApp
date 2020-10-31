@@ -6,16 +6,30 @@
   color: #7f8fa4;
 }
 
-input {
+/* input {
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
-  border-bottom-style: groove;
-  background-color: #eee;
+  /* border-bottom-style: groove; */
+/* background-color: #ffffff; */
+/* padding: 5px; */
+/* width: 100%; */
+/* } */
+.form-control,
+.form-control:focus {
+  display: inline;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-color: rgb(206, 212, 218);
+  border-bottom-width: 1px;
 }
 
 input:focus {
   outline: none;
+}
+.col {
+  background: #ffffff;
 }
 
 .bgNav {
@@ -38,7 +52,7 @@ input:focus {
 }
 /***Payments Seearch*/
 
-.has-search .form-control-feedback {
+/* .has-search .form-control-feedback {
   position: absolute;
   z-index: 2;
   display: block;
@@ -48,7 +62,7 @@ input:focus {
   text-align: center;
   pointer-events: none;
   color: #aaa;
-}
+} */
 /** transaction Table **/
 table {
   border-collapse: collapse;

@@ -2,20 +2,19 @@ import React from "react";
 import Dropdown from "./Dropdown";
 import itemIcom from "../icons/itemIcom.svg";
 import { Transactions } from "../utils/DummyData";
-import "font-awesome/css/font-awesome.min.css";
 
 function Table() {
   return (
-    <div className="container">
+    <div className="container mt-4">
       <h3>Payments</h3>
-      <div className=" d-flex justify-content-between">
+      <div className="mb-3 d-flex justify-content-between">
         <p>
-          Showing <span>20</span> out of 500 Payments
+          Showing <span className="text-info">20</span> out of 500 Payments
         </p>
-        <div className="">
-          <i className="fa fa-search" />
-          <input type="text" className="form-control" placeholder="Search" />
-        </div>
+        <form className=" w-50">
+          {/* <i className="fa fa-search" /> */}
+          <input className="form-control" type="text" placeholder="Search" />
+        </form>
         <div>
           <Dropdown />
         </div>
@@ -40,7 +39,34 @@ function Table() {
                 <td> {items.Price}</td>
                 <td> {items.TransactionNo}</td>
                 <td> {items.Time}</td>
-                <td> {items.Payments}</td>
+
+                {items.Payments === "Pending" && (
+                  <td>
+                    {" "}
+                    <span className="border rounded p-1 btn-outline-warning">
+                      {" "}
+                      &#9679; {items.Payments}
+                    </span>
+                  </td>
+                )}
+                {items.Payments === "Reconcilled" && (
+                  <td>
+                    <span class=" border rounded p-1 btn-outline-success">
+                      {" "}
+                      &#9679; {items.Payments}
+                    </span>
+                  </td>
+                )}
+                {items.Payments !== "Reconcilled" &&
+                  items.Payments !== "Pending" && (
+                    <td>
+                      {" "}
+                      <span className="border rounded p-1 btn-outline-secondary">
+                        {" "}
+                        &#9679; {items.Payments}
+                      </span>
+                    </td>
+                  )}
               </tr>
             ))}
           </table>

@@ -45,7 +45,7 @@ export class MyCharts extends Component {
     return (
       <div>
         <AreaChart
-          width={100}
+          width={90}
           height={50}
           data={data}
           margin={{
