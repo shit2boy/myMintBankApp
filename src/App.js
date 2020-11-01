@@ -29,11 +29,11 @@ export class App extends Component {
         </div>
         <Container fluid>
           <Row>
-            <Col className="mr-4 p3" sm={2}>
+            <Col className="mb-1 p3 d-none d-lg-block" lg={2}>
               <Sidebar />
             </Col>
             <Col
-              className="ml-4 container"
+              className="ml-lg-4 container"
               style={{ backgroundColor: "#f6f9fc" }}
             >
               <Row className="">
@@ -75,7 +75,7 @@ export class App extends Component {
                       <span className=" text-success"> 80</span>
                     </p>
                     <p>
-                      Total Payments: <span className="text-info">100</span>
+                      Total Payments: <span className="text-primary">100</span>
                     </p>
                   </div>
                   <hr />
@@ -95,7 +95,7 @@ export class App extends Component {
                       <span className=" text-success"> 80</span>
                     </p>
                     <p>
-                      Total Payments: <span className="text-info">100</span>
+                      Total Payments: <span className="text-primary">100</span>
                     </p>
                   </div>
                 </Col>

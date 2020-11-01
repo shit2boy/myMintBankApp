@@ -24,7 +24,7 @@ export class Navigationbar extends Component {
             <form className=" w-50 mx-auto">
               <input
                 type="search"
-                style={{ borderBottomStyle: "hidden" }}
+                style={{ borderBottomStyle: "hidden", backgroundColor: "#fff" }}
                 className="form-control mr-sm-2 w-100"
                 placeholder="Search..."
               />

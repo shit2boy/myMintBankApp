@@ -5,24 +5,19 @@
   font-family: "Segoe UI";
   color: #7f8fa4;
 }
-
-/* input {
-  border-top-style: hidden;
-  border-right-style: hidden;
-  border-left-style: hidden;
-  /* border-bottom-style: groove; */
-/* background-color: #ffffff; */
-/* padding: 5px; */
-/* width: 100%; */
-/* } */
+a {
+  text-decoration: none !important;
+  color: #7f8fa4 !important;
+}
 .form-control,
 .form-control:focus {
   display: inline;
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
-  border-bottom-color: rgb(206, 212, 218);
+  border-bottom-color: #787878;
   border-bottom-width: 1px;
+  background-color: #f6f9fc !important;
 }
 
 input:focus {
@@ -50,20 +45,6 @@ input:focus {
   box-sizing: border-box;
   border-radius: 2px;
 }
-/***Payments Seearch*/
-
-/* .has-search .form-control-feedback {
-  position: absolute;
-  z-index: 2;
-  display: block;
-  width: 2.375rem;
-  height: 2.375rem;
-  line-height: 2.375rem;
-  text-align: center;
-  pointer-events: none;
-  color: #aaa;
-} */
-/** transaction Table **/
 table {
   border-collapse: collapse;
   width: 100%;

@@ -8,8 +8,8 @@ function Table() {
     <div className="container mt-4">
       <h3>Payments</h3>
       <div className="mb-3 d-flex justify-content-between">
-        <p>
-          Showing <span className="text-info">20</span> out of 500 Payments
+        <p className="d-none d-lg-block">
+          Showing <span className="text-primary">20</span> out of 500 Payments
         </p>
         <form className=" w-50">
           {/* <i className="fa fa-search" /> */}
@@ -21,7 +21,7 @@ function Table() {
       </div>
       <div className="row">
         <section className="col-md-12">
-          <table>
+          <table className="table-responsive-sm">
             <tr>
               <th>Item Type</th>
               <th> Price</th>

@@ -68,14 +68,14 @@ export default class Graph extends Component {
     return (
       <AreaChart
         width={650}
-        height={250}
+        height={230}
         data={data}
         margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
       >
         <defs>
           <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%" stopColor="#0294FF" stopOpacity={0.3} />
-            <stop offset="95%" stopColor="#ffffff" stopOpacity={0.2} />
+            <stop offset="3%" stopColor="#0294FF" stopOpacity={0.3} />
+            <stop offset="97%" stopColor="#ffffff" stopOpacity={0.2} />
           </linearGradient>
         </defs>
         <XAxis

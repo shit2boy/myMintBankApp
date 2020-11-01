@@ -29,20 +29,20 @@ export class SideNavbar extends Component {
   render() {
     // const { collapsed } = this.state;
     return (
-      <div>
+      <>
         <Sider
           style={{ padding: "5px", minHeight: "100vh" }}
           theme="light"
-          className=" site-layout-background"
+          className="mt-3 site-layout-background"
           width={250}
         >
           <span
-            class="badge mt-5 ml-3 py-3 px-5 badge-pill badge-success"
+            class="badge mt-5 mx-auto py-3 px-5 badge-pill badge-success"
             style={{ cursor: "pointer", fontSize: "14px" }}
           >
             Generate Invoice
           </span>
-          <menu className="p-3 mt-2">main</menu>
+          <menu className="p-3 mt-2">Main</menu>
           <Menu theme="light" defaultSelectedKeys={["1"]} mode="inline">
             <Menu.Item
               className=""
@@ -71,7 +71,7 @@ export class SideNavbar extends Component {
               <small> All Orders</small>
             </Menu.Item>
             <Menu.Item key="6" icon={<img src={pendingOrder} alt="" />}>
-              Pending Orders
+              <small> Pending Orders</small>
             </Menu.Item>
             <Menu.Item key="7" icon={<img src={reconcilledOrders} alt="" />}>
               <small> Reconcilled Orders</small>
@@ -82,7 +82,7 @@ export class SideNavbar extends Component {
             </Menu.Item>
           </Menu>
         </Sider>
-      </div>
+      </>
     );
   }
 }
