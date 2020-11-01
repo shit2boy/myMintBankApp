@@ -23,7 +23,7 @@ const data = [
   },
   {
     name: " Mar",
-    pv: 5800,
+    pv: 4800,
     amt: 2290,
   },
   {
