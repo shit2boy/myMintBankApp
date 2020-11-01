@@ -20,57 +20,57 @@ function Table() {
         </div>
       </div>
       <div className="row">
-        <section className="col-md-12">
-          <table className="table-responsive-sm">
-            <tr>
-              <th>Item Type</th>
-              <th> Price</th>
-              <th>Transaction Number</th>
-              <th>Time</th>
-              <th>Transaction Type</th>
-            </tr>
+        {/* <section className="col-md-12 col-sm"> */}
+        <table className="table-responsive-sm">
+          <tr>
+            <th>Item Type</th>
+            <th> Price</th>
+            <th>Transaction Number</th>
+            <th>Time</th>
+            <th>Transaction Type</th>
+          </tr>
 
-            {Transactions.map((items) => (
-              <tr key={items.id}>
+          {Transactions.map((items) => (
+            <tr key={items.id}>
+              <td style={{ color: "#414042" }}>
+                <img src={itemIcom} alt="itemIcons" className="p-2" />
+                {items.ItemType}
+              </td>
+              <td> {items.Price}</td>
+              <td> {items.TransactionNo}</td>
+              <td> {items.Time}</td>
+
+              {items.Payments === "Pending" && (
                 <td>
-                  <img src={itemIcom} alt="itemIcons" className="p-2" />
-                  {items.ItemType}
+                  {" "}
+                  <span className="border rounded p-1 btn-outline-warning">
+                    {" "}
+                    &#9679; {items.Payments}
+                  </span>
                 </td>
-                <td> {items.Price}</td>
-                <td> {items.TransactionNo}</td>
-                <td> {items.Time}</td>
-
-                {items.Payments === "Pending" && (
+              )}
+              {items.Payments === "Reconcilled" && (
+                <td>
+                  <span class=" border rounded p-1 btn-outline-success">
+                    {" "}
+                    &#9679; {items.Payments}
+                  </span>
+                </td>
+              )}
+              {items.Payments !== "Reconcilled" &&
+                items.Payments !== "Pending" && (
                   <td>
                     {" "}
-                    <span className="border rounded p-1 btn-outline-warning">
+                    <span className="border rounded p-1 btn-outline-secondary">
                       {" "}
                       &#9679; {items.Payments}
                     </span>
                   </td>
                 )}
-                {items.Payments === "Reconcilled" && (
-                  <td>
-                    <span class=" border rounded p-1 btn-outline-success">
-                      {" "}
-                      &#9679; {items.Payments}
-                    </span>
-                  </td>
-                )}
-                {items.Payments !== "Reconcilled" &&
-                  items.Payments !== "Pending" && (
-                    <td>
-                      {" "}
-                      <span className="border rounded p-1 btn-outline-secondary">
-                        {" "}
-                        &#9679; {items.Payments}
-                      </span>
-                    </td>
-                  )}
-              </tr>
-            ))}
-          </table>
-        </section>
+            </tr>
+          ))}
+        </table>
+        {/* </section> */}
       </div>
     </div>
   );

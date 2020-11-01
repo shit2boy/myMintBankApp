@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Segoe UI";
   color: #7f8fa4;
+  line-height: 1.4;
 }
 a {
   text-decoration: none !important;

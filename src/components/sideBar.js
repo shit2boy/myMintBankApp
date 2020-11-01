@@ -37,7 +37,7 @@ export class SideNavbar extends Component {
           width={250}
         >
           <span
-            class="badge mt-5 mx-auto py-3 px-5 badge-pill badge-success"
+            class="badge mt-3 mx-auto py-3 px-5 badge-pill badge-success"
             style={{ cursor: "pointer", fontSize: "14px" }}
           >
             Generate Invoice

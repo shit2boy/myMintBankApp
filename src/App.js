@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import Navigationbar from "./components/Navigationbar";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { Container, Col, Row, ProgressBar } from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 import Sidebar from "./components/sideBar";
+import { Progress } from "antd";
 // import MyCharts from "./components/chart";
 import { dummyData } from "./utils/DummyData";
 import { Select } from "antd";
@@ -12,7 +13,7 @@ import Graph from "./components/Graph";
 import Table from "./components/Table";
 import "font-awesome/css/font-awesome.min.css";
 
-// const { Select } = antd;
+// const { Progress } = antd;
 
 const { Option } = Select;
 export class App extends Component {
@@ -24,9 +25,7 @@ export class App extends Component {
     const formatDate = { day: "numeric", year: "numeric", month: "long" };
     return (
       <React.Fragment>
-        <div>
-          <Navigationbar />
-        </div>
+        <Navigationbar />
         <Container fluid>
           <Row>
             <Col className="mb-1 p3 d-none d-lg-block" lg={2}>
@@ -36,20 +35,20 @@ export class App extends Component {
               className="ml-lg-4 container"
               style={{ backgroundColor: "#f6f9fc" }}
             >
-              <Row className="">
+              <Row className="mt-3">
                 <Transaction />
               </Row>
               <Row className="container mt-3">
                 {/* <div>{this.state.date}</div> */}
-                <Col className="">
+                <Col className="col-lg-8 col-sm col-md">
                   <div
                     className=" p-3 mb-2 d-flex justify-content-between"
                     style={{ fontSize: "14px" }}
                   >
-                    <strong>
+                    <h5>
                       {" "}
                       Today : {date.toLocaleDateString(undefined, formatDate)}
-                    </strong>
+                    </h5>
                     <div>
                       <Select defaultValue="Jan1- Jun 1" style={{ width: 130 }}>
                         <Option value="Jul 1- Dec. 1">Jul 1- Dec. 1</Option>
@@ -57,16 +56,17 @@ export class App extends Component {
                     </div>
                   </div>
                   <div>
-                    <Graph data={dummyData} />
+                    <Graph />
                   </div>
                 </Col>
                 <Col className="m-1">
                   <div className="mt-1">
                     <h6>Orders</h6>
-                    <ProgressBar className="mb-1">
-                      <ProgressBar variant="success" now={80} key={1} />
-                      <ProgressBar variant="warning" now={20} key={2} />
-                    </ProgressBar>
+                    <Progress
+                      percent={100}
+                      success={{ percent: 80 }}
+                      strokeColor="#FDC203"
+                    />
                     <p>
                       Pending Orders: <span className=" text-warning"> 20</span>{" "}
                     </p>
@@ -82,10 +82,11 @@ export class App extends Component {
                   <div className="mt-4">
                     {" "}
                     <h6>Payments</h6>
-                    <ProgressBar className="mb-1">
-                      <ProgressBar variant="success" now={80} key={1} />
-                      <ProgressBar variant="warning" now={20} key={2} />
-                    </ProgressBar>
+                    <Progress
+                      percent={100}
+                      success={{ percent: 80 }}
+                      strokeColor="#FDC203"
+                    />
                     <p>
                       Un-reconcilled Payments:{" "}
                       <span className=" text-warning"> 20</span>{" "}
